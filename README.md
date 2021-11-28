@@ -80,7 +80,7 @@
 ### head -n 20 state.txt | tail -10 → 顯示11~20行的內容
 
 
-
+# 實際操作截圖
 https://cdn.discordapp.com/attachments/854701007045001264/907141604031213618/unknown.png
 https://cdn.discordapp.com/attachments/854701007045001264/907144589205446667/unknown.png
 https://cdn.discordapp.com/attachments/854701007045001264/907147834405580821/unknown.png
