@@ -81,4 +81,11 @@
 
 
 
-
+https://cdn.discordapp.com/attachments/854701007045001264/907141604031213618/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907144589205446667/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907147834405580821/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907153946722828288/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907153994927976458/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907155772822147092/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907159336902606848/unknown.png
+https://cdn.discordapp.com/attachments/854701007045001264/907160345724977152/unknown.png
