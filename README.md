@@ -89,3 +89,106 @@ https://cdn.discordapp.com/attachments/854701007045001264/907153994927976458/unk
 https://cdn.discordapp.com/attachments/854701007045001264/907155772822147092/unknown.png
 https://cdn.discordapp.com/attachments/854701007045001264/907159336902606848/unknown.png
 https://cdn.discordapp.com/attachments/854701007045001264/907160345724977152/unknown.png
+
+
+#Git 指令
+###初始化專案：git init
+###單一檔案加入索引(暫存區)：git add <檔案名稱>
+###所有檔案加入索引(暫存區)：git add .(#.的意思代表全部)
+###觀看當前狀態：git status
+###提交版本：git commit -m “修改紀錄”
+###瀏覽歷史紀錄：git log
+###取消追蹤檔案：git rm –cached <檔案名稱>
+###取消commit：git reset --mixed HEAD^
+###連接遠端數據庫：git remote add origin <remote網址>
+###將本地資料推到remote端：git push -u origin master
+###將遠端資料拉回來：git fetch
+###將拉回的資料和本地資料合併：git merge
+###git pull = git fetch + git merge
+
+
+#Git-版本控制流程
+##工作目錄         暫存區         本地數據庫       遠端數據庫
+###      git add     ->   git commit   ->  git push
+###   git checkout/git merge      <-        git fetch
+###                <-      git pull   <-
+
+#Git- 不再追蹤檔案 & 取消commit
+##工作目錄         暫存區         本地數據庫       遠端數據庫
+###    git rm –cached     git reset HEAD^ 
+###         <-              <-
+
+
+#Git- 取消追蹤檔案
+###修改index.html：vi index.html
+###查看狀態：$ git status
+###將檔案加入索引：$ git add index.html
+###查看狀態：$ git status
+###取消追蹤檔案：$ git rm –cached index.html
+###查看狀態：$ git status
+
+
+#Git- 取消commit
+###新增檔案：vi hello.py
+###將檔案加入索引：$ git add .
+###提交版本：$ git commit -m “print method”
+###查看歷史紀錄：$ git log
+###取消commit：$ git reset --mixed HEAD^
+###查看歷史紀錄：$ git log
+###查看狀態：$ git status
+
+#Git- Reset模式
+##Reset有三種模式：
+####--mixed：預設模式，Commit 拆出來的檔案會留在工作目錄，但不會留在暫存區
+####--soft：工作目錄跟暫存區的檔案都不會被丟掉
+####--hard：工作目錄以及暫存區的檔案都會丟掉
+
+
+#Git-使用方法
+
+##六. 進入Remote repository(遠端數據庫)
+###1.雲端跟本地端連動：
+####$ git remote add origin <remote網址>
+
+###2.Push Local master(主幹)進入Remote：
+####$ git push --set-upstream origin master
+
+###3.回到Github查看
+
+
+#Git-使用方法
+###1.到github上新增或編輯README.md
+###2.把遠端東西拉回來：$ git fetch
+###3.查看狀態：$ git status
+###4.查看歷史紀錄：$ git log
+###5.比較本地分支和遠端分之內容的不同：$ git diff origin/master
+###6.將遠端和本地端的內容做合併：$ git merge origin/master
+###7查看狀態：$ git status
+###8.Pull下載更新：$ git pull origin
+
+
+#Git Flow 分支應用
+###Master 分支
+####主要是用來放穩定、隨時可上線的版本。
+####這個分支的來源只能從別的分支合併過來
+####通常會在這個分支上的 Commit 上打上版本號標籤。
+###Develop 分支
+####所有開發的基礎分支
+####當要新增功能的時候，所有的 Feature 分支都是從這個分支切出去的。而功能完成後，也都會合併回來這個分支。
+###Hotfix 分支
+####當線上產品發生緊急問題的時候，會從 Master 分支開一個 Hotfix 分支出來進行修復，Hotfix 分支修復完成之後，會合併回 Master 分支，也同時會合併一份到 Develop 分支。
+###Release 分支
+####當認為 Develop 分支夠成熟了，就會合併到 Release 分支，在這邊進行上線前的最後測試。
+####測試完成後，Release 分支將會同時合併到 Master 以及 Develop 這兩個分支上
+###Feature 分支
+####當要開始新增功能的時候
+####從 Develop 分支來的，完成之後再併回 Develop 分支。
+
+
+
+
+
+
+
+
+
